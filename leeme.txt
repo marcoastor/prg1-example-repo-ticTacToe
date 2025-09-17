@@ -1,0 +1,37 @@
+PRIMER PASO.
+Para compilar el código he usado este comando:
+javac -d ./classes/ ./src/*.java
+
+SEGUNDO PASO.
+Para generar la documentación he usado este comando:
+javadoc -d ./doc/ -author -version -private -linksource ./src/*.java
+
+TERCER PASO.
+Para ejecutar la clase principal he usado este comando:
+java -classpath ./classes MainTicTacToe
+
+CUARTO PASO.
+Para incluir todas las clases en el paquete he usado esta serie de comandos:
+mkdir -p ./src/es/unileon/prg1/ticTacToe
+cp ./src/*.java ./src/es/unileon/prg1/ticTacToe/
+
+A parte, en cada uno de los ficheros .java he añadido la siguiente linea al principio:
+package es.unileon.prg1.ticTacToe;
+
+QUINTO PASO.
+Para compilar una vez incluido todo en el paquete he usado este comando:
+javac -d ./classes/ ./src/es/unileon/prg1/ticTacToe/*.java
+
+SEXTO PASO.
+Para generar la documentación desde el directorio de trabajo he usado este comando:
+javadoc -d ./doc -author -version -private -linksource ./src/es/unileon/prg1/ticTacToe/*.java
+
+SÉPTIMO PASO.
+Para ejecutar desde el directorio de trabajo he usado este comando:
+java -classpath ./classes es.unileon.prg1.ticTacToe.MainTicTacToe
+
+OCTAVO PASO.
+Para incluir las imágenes dentro del directorio y volver a lanzar la app he usado los siguientes comandos:
+mkdir -p ./etc/images
+mv ./src/*.jpg ./etc/images
+java -classpath ./classes es.unileon.prg1.ticTacToe.MainTicTacToe
